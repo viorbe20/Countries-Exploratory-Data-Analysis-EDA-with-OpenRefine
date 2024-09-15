@@ -107,7 +107,7 @@ Según la documentación oficial los [tipos de datos](https://openrefine.org/doc
 Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`. 
 
 - Selecciona la columna en la que quieres aplicar la expresión. Haz clic en el menú desplegable de la columna.
-- Ve a "Edit cells" → "Transform...".
+- Ve a _Edit cells_ → _Transform..._.
 
 
 <figure>
@@ -171,10 +171,86 @@ Los cambios que se han realizado son:
 
 ### 5.3. Gestión de celdas vacías y nulos
 
-Para detectar este tipo de dato, se pueden seguir los siguientes pasos:
+Para este ejemplo escogeremos la columna `popu_life_expectancy`. Sigue los siguientes pasos:
 
-- 
+1. Selecciona la columna: Asegúrate de tener la columna sobre la cual quieres aplicar la faceta seleccionada.
 
+2. Para celdas nulas:
+
+> _Facet -> Customized facets -> Facet by null_
+
+Esto te permitirá crear una faceta que agrupa las celdas que son nulas (es decir, celdas que no tienen ningún valor asignado).
+
+3. Para celdas vacías:
+
+> _Facet -> Customized facets -> Facet by empty string_
+
+Esto creará una faceta que agrupa las celdas que contienen una cadena vacía ("").
+
+4. Para celdas en blanco:
+
+> _Facet -> Customized facets -> Facet by blank_
+
+Esta opción agrupa tanto celdas que son nulas, celdas vacías (""), como celdas que contienen solo espacios en blanco (" ").
+
+<figure>
+  <img src="./img/facet-by-null.png" alt="facet-by-null" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura: Selección facet by null.</figcaption>
+</figure>
+
+Si realizas los tres casos anteriores debe aparecerte algo como esto:
+
+<figure>
+  <img src="./img/null-empty-both-facets.png" alt="null-empty-both-facets" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura: Facets de nulos y celdas vacías.</figcaption>
+</figure>
+
+En cada _facet_ puedes pulksar en el botón _change_ para ver la consulta realizada y los resultados.
+
+A continuación expondremos los cambios que se realizarán en este caso, columna por columna.
+
+**Columna _continent_**
+- Nulos: 253
+- Datos: 8
+
+Existe otra columna que contiene el nombre del país o región y no tiene datos vacíos, por lo que con su ayuda podremos completar el continente correspondiente. Veamos cuántos países diferentes existen. Selecciona:
+
+> _Facet -> Text facet
+
+En el panel de facets que aparece, verás todos los nombres de países únicos, junto con un conteo de cuántas veces aparece cada uno. Hay muchos países como para hacerlo a mano uno por uno.
+
+<figure>
+  <img src="./img/country-text-facet.png" alt="country-text-facet" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura: Facets de conteos de países.</figcaption>
+</figure>
+
+Para esta transformación vamos a realizar los siguientes pasos.
+
+1. Buscamos un dataset que contenga dos columnas: una con nombre de países y la segunda columna con el nombre del contienente correspondiente. Intentaremos que el dataset esté en formato .xlsx para evitar problemas de interpretación de los datos. Crearemos un nuevo proyecto.
+
+<figure>
+  <img src="./img/countries-continents-project.png" alt="countries-continents-project" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura: countries-continents-project.</figcaption>
+</figure>
+
+2. Detrectamos que en la columna _country_ del dataset original, existen algunos nombre que no comienzan por mayúscula, por lo que estandarizamos.
+
+> _Country -> Edit cell -> Transform..._
+
+Escribimos la siguiente expresión: `value.toTitlecase()`
+
+<figure>
+  <img src="./img/value-to-titlecase.png" alt="value-to-titlecase" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura: value-to-titlecase.</figcaption>
+</figure>
+
+3. Lo mprimero que haremos será eliminar la columna _continent_ ya que generaremos una nueva columna y usaremos ese mismo nombre. Selecconamos la columna _country_ del dataset.
+
+> _country -> Edit column -> Add column based on this column…_
+
+Añadiremos la siguiente expresión la cual busca el valor de la columna _Country_ en el dataset de referencia "countries_continents_dataset", obtiene el valor correspondiente de la columna Continent, y devuelve ese valor para completar la celda actual. El [0] accede al primer valor en caso de que la búsqueda devuelva una lista.  De esta forma se crea una nueva columna _continent_ con los nombres correspondientes. Algunos valores seguirán en blanco, ya que puede que no existan esas coincidencias. Habrá que escribirlas a mano.
+
+> `cell.cross("countries_continents_dataset", "Country").cells["Continent"].value[0]`
 ### 5.4. Gestión de duplicados
 
 ### 5.5. Gestión de tipo de datos
@@ -198,5 +274,10 @@ Para detectar este tipo de dato, se pueden seguir los siguientes pasos:
     color: #555;
   }
 </style>
+cell.cross("countries_continents_dataset", "Country").cells["Continent"].value[0]
 
-
+https://www.kaggle.com/datasets/statchaitya/country-to-continent
+[Countries by Continent Dataset](https://www.kaggle.com/datasets/hserdaraltan/countries-by-continent?resource=download)
+https://louisiana.libguides.com/guide_to_openrefine
+https://docs.gbif.org/openrefine-guide/3.0/es/
+[OpenRefine Tutorials: How To Join Two Data Set](https://www.youtube.com/watch?v=ogE2xZk7354)
