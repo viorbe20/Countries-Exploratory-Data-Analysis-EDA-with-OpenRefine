@@ -1,23 +1,5 @@
-<style>
-  .styled-image {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    width: 35%; 
-    height: auto;
-    display: block;
-    margin: 20px auto; 
-    background-color: #fff;
-    border-radius: 10px;
-  }
-
-  .styled-figcaption {
-    font-size: 0.8em;
-    text-align: center;
-    color: #555;
-  }
-</style>
-
 # Análisis Exploratorio de Datos (ADE) con OpenRefine
+
 
 [Read in English](README.md)
 
@@ -259,8 +241,8 @@ Para esta transformación vamos a realizar los siguientes pasos.
 Escribimos la siguiente expresión: `value.toTitlecase()`
 
 <figure>
-  <img src="./img/value-to-titlecase.png" alt="value-to-titlecase" class="styled-image" />
-  <figcaption class="styled-figcaption">Figura: value-to-titlecase.</figcaption>
+  <img src="./img/value-to-titlecase.png" alt="value-to-titlecase" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: value-to-titlecase.</figcaption>
 </figure>
 
 3. Lo mprimero que haremos será eliminar la columna _continent_ ya que generaremos una nueva columna y usaremos ese mismo nombre. Selecconamos la columna _country_ del dataset.
