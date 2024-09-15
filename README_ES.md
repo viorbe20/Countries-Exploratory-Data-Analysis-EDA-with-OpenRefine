@@ -102,7 +102,7 @@ Según la documentación oficial los [tipos de datos](https://openrefine.org/doc
 - _boolean_: cuyos valores son _true_ o _false_.
 - _date_: formato extendido compatible con ISO-8601 con tiempo en UTC: YYYY-MM-DDTHH:MM
 - _error_: se crea cuando la celda almacena un error generado durante una transformación en OpenRefine.
--_null_: en casos de celdas sin valor. No confundir con celdas que contienen valores como '0', 'false', espacios en blanco o cadenas vacías, etc.
+- _null_: en casos de celdas sin valor. No confundir con celdas que contienen valores como '0', 'false', espacios en blanco o cadenas vacías, etc.
 
 Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`. 
 
@@ -127,11 +127,34 @@ Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`
 
 ### 5.1. Nombre de las columnas
 
+En primer se normalizarán los nombres de las columnas. Para ello se debe seleccionar la columna donde se desea eralizar el cambio, después `Edit Column` -> `Rename this column`. 
 
+<figure>
+  <img src="./img/rename this column.png" alt="rename-this-column" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura 1: Uso de type(value) en OpenRefine.</figcaption>
+</figure>
+
+
+Se introduce el nuevo nombre y se pulsa `Ok`.
+
+<figure>
+  <img src="./img/column renamed.png" alt="column-renamed" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura 1: Uso de type(value) en OpenRefine.</figcaption>
+</figure>
+
+Alguna de las acciones que se realizarán son:
+
+a) Traducción a inglés de los nombres de columnas en español.
+- `ganancias` | `earnings`
+- 'dominio' | 'domain'
+b) Conversión a _lower case_
+- `Num` | `num`
+c) Modificación de nombres que pueden ser confusos o no precisos.
+-`Street` | `address`
+- `life_expectancy` | `life_expectancy_avg`
+- `pop_life` | `popu_life_expectancy`
 
 [↑ Subir](#contenido)
-
-
 
 ### 4.3. Fechas
 
