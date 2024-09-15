@@ -11,12 +11,12 @@ Entidad: Centro de Investigación, Desarrollo e Innovación en Tecnologías de l
 
 Puedes acceder al material original a través del repositorio oficial en el siguiente enlace: [Repositorio RIDDA2 UTP](https://ridda2.utp.ac.pa/bitstream/handle/123456789/18247/practica-open-refine-v2-2024-02-06.pdf?sequence=14&isAllowed=y)
 
-## Objetivo: 
+## Objetivo 
 Adquirir competencias en el manejo de datos, incluyendo su normalización, manipulación y limpieza, para realizar de manera óptima el análisis exploratorio de datos (AED) y posteriormente exponer los resultados mediante visualizaciones claras y dinámicas.
 
 ## Descripción
 
-A partir de una tabla  la tabla en la imagen muestra información relacionada con países o regiones del mundo. Cada fila parece representar un país o territorio, y las columnas contienen varios datos sobre cada uno. A continuación, te hago un análisis rápido de las posibles referencias de las columnas:
+A partir de una tabla la tabla en la imagen muestra información relacionada con países o regiones del mundo. Cada fila parece representar un país o territorio, y las columnas contienen varios datos sobre cada uno. A continuación, te hago un análisis rápido de las posibles referencias de las columnas:
 
 code / Num: Código numérico o alfabético del país o región.
 country: El nombre del país o territorio.
@@ -48,14 +48,15 @@ dominio: Podría ser el dominio de internet asociado con el país o región (por
 
 ### 1. Open Refine
 
-[↑ Up](#contenido)
+[↑ Subir](#contenido)
+
 ### 2. Carga de datos
 
-[↑ Up](#contenido)
+[↑ Subir](#contenido)
 
 ### 3. Creación del proyecto
 
-[↑ Up](#contenido)
+[↑ Subir](#contenido)
 
 ### 4. Conceptos importantes
 
@@ -86,36 +87,63 @@ Be careful when in records mode that you do not accidentally delete rows based o
 
 This feature is related to Column Groups, which however is incomplete and deprecated.
 
-
-[↑ Up](#contenido)
+[↑ Subir](#contenido)
 
 ### 4.2. Tipo de datos
 
-Según l adocumentación oficial:
-The data types supported are:
+Según la documentación oficial los [tipos de datos](https://openrefine.org/docs/manual/exploring) que existen son:
 
-string (one or more text characters)
-number (one or more characters of numbers only)
-boolean (values of “true” or “false”)
-date (ISO-8601-compliant extended format with time in UTC: YYYY-MM-DDTHH:MM:SSZ)
-OpenRefine recognizes two further data types as a result of its own processes:
+- _string_: uno o más caracteres de texto.
+- _number_: uno o más caracteres numéricos.
+- _boolean_: cuyos valores son _true_ o _false_.
+- _date_: formato extendido compatible con ISO-8601 con tiempo en UTC: YYYY-MM-DDTHH:MM
+- _error_: se crea cuando la celda almacena un error generado durante una transformación en OpenRefine.
+-_null_: en casos de celdas sin valor. No confundir con celdas que contienen valores como '0', 'false', espacios en blanco o cadenas vacías, etc.
 
-error
-null
-An “error” data type is created when the cell is storing an error generated during a transformation in OpenRefine.
+Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`. 
 
-A “null” data type is a special type that means “this cell has no value.” It’s distinct from cells that have values such as “0” or “false”, or cells that look empty but have whitespace in them, or cells that contain empty strings. When you use type(value), it will show you that the cell’s value is “null” and its type is “undefined.” You can opt to show “null” values, by going to All → View → Show/Hide ‘null’ values in cells.
+- Selecciona la columna en la que quieres aplicar la expresión. Haz clic en el menú desplegable de la columna.
+- Ve a "Edit cells" → "Transform...".
 
-Changing a cell's data type is not the same operation as transforming its contents. For example, using a column-wide transform such as Transform → Common transforms → To date may not convert all values successfully, but going to an individual cell, clicking “edit”, and changing the data type can successfully convert text to a date. These operations use different underlying code. Learn more about date formatting and 
-transformations in the next section.
+<figure>
+  <img src="./img/edit-cells-transform.png" alt="edit-cells-transform" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura 1: Uso de type(value) en OpenRefine.</figcaption>
+</figure>
+
+- En el cuadro de diálogo que aparece, en el campo de expresión, escribe: `type(value)`. Esto devolverá el tipo de dato de cada celda.
+
+<figure>
+  <img src="./img/type-value.png" alt="edit-cells-transform" class="styled-image" />
+  <figcaption class="styled-figcaption">Figura 1: Uso de type(value) en OpenRefine.</figcaption>
+</figure>
+
+[↑ Subir](#contenido)
 
 ### 5. AED
 
 
-[↑ Up](#contenido)
+[↑ Subir](#contenido)
 
 ### 4.2. Transformando datos
 To transform data from one type to another, see Transforming data for information on using common tranforms, and see Expressions for information on using toString(), toDate(), and other functions.
 
 ### 4.3. Fechas
 
+<style>
+  .styled-image {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 35%; 
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .styled-figcaption {
+    font-size: 0.8em;
+    text-align: center;
+    color: #555;
+  }
+</style>
