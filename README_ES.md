@@ -109,6 +109,7 @@ Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`
 - Selecciona la columna en la que quieres aplicar la expresión. Haz clic en el menú desplegable de la columna.
 - Ve a "Edit cells" → "Transform...".
 
+
 <figure>
   <img src="./img/edit-cells-transform.png" alt="edit-cells-transform" class="styled-image" />
   <figcaption class="styled-figcaption">Figura 1: Uso de type(value) en OpenRefine.</figcaption>
@@ -142,21 +143,42 @@ Se introduce el nuevo nombre y se pulsa `Ok`.
   <figcaption class="styled-figcaption">Figura 1: Uso de type(value) en OpenRefine.</figcaption>
 </figure>
 
-Alguna de las acciones que se realizarán son:
+Los cambios que se han realizado son:
 
-a) Traducción a inglés de los nombres de columnas en español.
-- `ganancias` | `earnings`
-- 'dominio' | 'domain'
-b) Conversión a _lower case_
-- `Num` | `num`
-c) Modificación de nombres que pueden ser confusos o no precisos.
--`Street` | `address`
-- `life_expectancy` | `life_expectancy_avg`
-- `pop_life` | `popu_life_expectancy`
+1. Traducción español a inglés
+
+| **Nombre original** | **Nombre modificado** |
+|---------------------|------------------------|
+| `ganancias`         | `earnings`             |
+| `dominio`           | `domain`               |
+
+2. Conversión a _lower case_
+
+| **Nombre original** | **Nombre modificado** |
+|---------------------|------------------------|
+| `Num`               | `num`                  |
+
+
+3. Modificación de nombres confusos o imprecisos
+
+| **Nombre original**  | **Nombre modificado**      |
+|----------------------|----------------------------|
+| `life_expectancy`    | `life_expectancy_avg`      |
+| `pop_life`           | `popu_life_expectancy`     |
+| `Street`            | `address`              |
 
 [↑ Subir](#contenido)
 
-### 4.3. Fechas
+### 5.3. Gestión de celdas vacías y nulos
+
+Para detectar este tipo de dato, se pueden seguir los siguientes pasos:
+
+- 
+
+### 5.4. Gestión de duplicados
+
+### 5.5. Gestión de tipo de datos
+
 
 <style>
   .styled-image {
@@ -176,3 +198,5 @@ c) Modificación de nombres que pueden ser confusos o no precisos.
     color: #555;
   }
 </style>
+
+
