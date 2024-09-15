@@ -48,11 +48,17 @@ _dominio_: dominio de internet asociado con el país o región.
 ## Contenido
 
 [1. Open Refine](#1-open-refine)
+
 [2. Carga de datos](#2-carga-datos)
+
 [3. Creación del proyecto](#3-creación-del-proyecto)
+
 [4. Conceptos importantes](#4-conceptos-importantes)
+
 [4.1. Rows vs. records](#41-rows-vs-records)
+
 [4.2. Tipo de datos](#42-tipo-de-datos)
+
 [5. Análisis Exploratorio de Datos (ADE)](#5-análisis-exploratorio-de-datos-ade)
 
 ### 1. Open Refine
