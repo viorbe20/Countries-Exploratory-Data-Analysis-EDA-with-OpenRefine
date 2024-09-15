@@ -1,3 +1,22 @@
+<style>
+  .styled-image {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 35%; 
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .styled-figcaption {
+    font-size: 0.8em;
+    text-align: center;
+    color: #555;
+  }
+</style>
+
 # Análisis Exploratorio de Datos (ADE) con OpenRefine
 
 [Read in English](README.md)
@@ -256,24 +275,7 @@ Añadiremos la siguiente expresión la cual busca el valor de la columna _Countr
 ### 5.5. Gestión de tipo de datos
 
 
-<style>
-  .styled-image {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    width: 35%; 
-    height: auto;
-    display: block;
-    margin: 20px auto; 
-    background-color: #fff;
-    border-radius: 10px;
-  }
 
-  .styled-figcaption {
-    font-size: 0.8em;
-    text-align: center;
-    color: #555;
-  }
-</style>
 cell.cross("countries_continents_dataset", "Country").cells["Continent"].value[0]
 
 https://www.kaggle.com/datasets/statchaitya/country-to-continent
