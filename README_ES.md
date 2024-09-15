@@ -1,14 +1,11 @@
 # Análisis Exploratorio de Datos (ADE) con OpenRefine
 
-
 [Read in English](README.md)
 
-
-[![Cover](./img/cover.jpg)]([URL_DEL_ENLACE](https://pixabay.com/es/illustrations/ai-generado-mundo-mapa-datos-8966867/))
-
 <a href="https://example.com/cover.jpg">
-  <img src="./img/cover.jpg" alt="Cover" style="width: 100%; height: auto;" />
+  <img src="./img/cover.jpg" alt="Cover" style="width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" />
 </a>
+
 
 ## Acerca de la guía
 Este proyecto es una práctica basada en el uso de OpenRefine para la limpieza de datos. La actividad se realizó con el objetivo de aprender y aplicar conceptos de alfabetización de datos y manejo de herramientas para la preparación y limpieza de datasets.
