@@ -3,6 +3,13 @@
 
 [Read in English](README.md)
 
+
+[![Cover](./img/cover.jpg)]([URL_DEL_ENLACE](https://pixabay.com/es/illustrations/ai-generado-mundo-mapa-datos-8966867/))
+
+<a href="https://example.com/cover.jpg">
+  <img src="./img/cover.jpg" alt="Cover" style="width: 100%; height: auto;" />
+</a>
+
 ## Acerca de la guía
 Este proyecto es una práctica basada en el uso de OpenRefine para la limpieza de datos. La actividad se realizó con el objetivo de aprender y aplicar conceptos de alfabetización de datos y manejo de herramientas para la preparación y limpieza de datasets.
 
@@ -265,3 +272,5 @@ https://www.kaggle.com/datasets/statchaitya/country-to-continent
 https://louisiana.libguides.com/guide_to_openrefine
 https://docs.gbif.org/openrefine-guide/3.0/es/
 [OpenRefine Tutorials: How To Join Two Data Set](https://www.youtube.com/watch?v=ogE2xZk7354)
+
+[Imagen Portada](https://pixabay.com/es/illustrations/ai-generado-mundo-mapa-datos-8966867/)
