@@ -12,29 +12,33 @@ Entidad: Centro de Investigación, Desarrollo e Innovación en Tecnologías de l
 Puedes acceder al material original a través del repositorio oficial en el siguiente enlace: [Repositorio RIDDA2 UTP](https://ridda2.utp.ac.pa/bitstream/handle/123456789/18247/practica-open-refine-v2-2024-02-06.pdf?sequence=14&isAllowed=y)
 
 ## Objetivo 
+
 Adquirir competencias en el manejo de datos, incluyendo su normalización, manipulación y limpieza, para realizar de manera óptima el análisis exploratorio de datos (AED) y posteriormente exponer los resultados mediante visualizaciones claras y dinámicas.
 
 ## Descripción
 
-A partir de una tabla la tabla en la imagen muestra información relacionada con países o regiones del mundo. Cada fila parece representar un país o territorio, y las columnas contienen varios datos sobre cada uno. A continuación, te hago un análisis rápido de las posibles referencias de las columnas:
+Los datos que se van a analizar representan información relacionada con países o regiones del mundo. Cada fila parece representar un país o territorio, y las columnas contienen varios datos sobre cada uno. A continuación se explican las columnas que contiene el conjunto de datos.
 
-code / Num: Código numérico o alfabético del país o región.
-country: El nombre del país o territorio.
-continent / region: Continente y región a la que pertenece el país.
-surface_area: Área superficial del país (probablemente en kilómetros cuadrados).
-independence_year: Año de independencia del país (si es aplicable).
-population: Población total del país.
-life_expectancy: Esperanza de vida promedio en el país.
-pop_life: Posiblemente una variante de población relacionada con la esperanza de vida.
-gnp / gnp_old: Producto Nacional Bruto (PNB) y posiblemente una versión anterior o alternativa del PNB.
-local_name: Nombre local del país en su idioma.
-government_form: Forma de gobierno del país (por ejemplo, monarquía constitucional).
-Street: Parece estar relacionado con direcciones específicas, pero no está claro a qué se refiere exactamente en este contexto.
-head_of_state: Nombre del jefe de estado actual del país.
-capital: Código numérico de la capital del país.
-code2: Otro código numérico del país, quizá relacionado con algún sistema alternativo.
-ganancias: Probablemente se refiere a los ingresos o ganancias del país en alguna unidad monetaria.
-dominio: Podría ser el dominio de internet asociado con el país o región (por ejemplo, un portal de datos).
+- _code_: código alfabético del país o región.
+- _num_: código numérico del país o región.
+- _country_: el nombre del país o territorio.
+_continent_: continente al que pertenece.
+_region_: región a nivel mundial a la que pertenece.
+_surface_area_: área de la superficie del país.
+_ independence_year: año de independencia del país (si es aplicable).
+_population_: población total del país.
+_life_expectancy_: esperanza de vida promedio.
+_pop_life_:  variante de población relacionada con la esperanza de vida.
+_gnp_: Producto Nacional Bruto (PNB).
+_gnp_old_:  versión anterior del PNB.
+_local_name_: nombre local del país en su idioma.
+_government_form_: forma de gobierno del país (por ejemplo, monarquía constitucional).
+_street_: direcciones específicas.
+_head_of_state_: nombre del jefe de estado del país.
+_capital_: código numérico de la capital del país.
+_code2_: otro código numérico del país.
+_ganancias_:  ingresos o ganancias del país en alguna unidad monetaria.
+_dominio_: dominio de internet asociado con el país o región.
 
 ## Contenido
 
@@ -44,7 +48,7 @@ dominio: Podría ser el dominio de internet asociado con el país o región (por
 [4. Conceptos importantes](#4-conceptos-importantes)
 [4.1. Rows vs. records](#41-rows-vs-records)
 [4.2. Tipo de datos](#42-tipo-de-datos)
-[5. AED](#5-aed)
+[5. Análisis Exploratorio de Datos (ADE)](#5-análisis-exploratorio-de-datos-ade)
 
 ### 1. Open Refine
 
@@ -119,13 +123,15 @@ Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`
 
 [↑ Subir](#contenido)
 
-### 5. AED
+### 5. Análisis Exploratorio de Datos (ADE)
+
+### 5.1. Nombre de las columnas
+
 
 
 [↑ Subir](#contenido)
 
-### 4.2. Transformando datos
-To transform data from one type to another, see Transforming data for information on using common tranforms, and see Expressions for information on using toString(), toDate(), and other functions.
+
 
 ### 4.3. Fechas
 
