@@ -73,6 +73,8 @@ _dominio_: dominio de internet asociado con el país o región.
 
 [5.4. Gestión de duplicados](#54-gestión-de-duplicados)
 
+
+
 ### 1. Open Refine
 
 [↑ Subir](#contenido)
@@ -424,6 +426,41 @@ Ahora hacemos clic en el botón que dice `cluster`justo en medio de la pantalla.
 </figure>
 
 Esto nos mostrará los casos de agrupación que detecta el programa. A la derecha, en la caja de texto, introducimo el valor que queramos, marcamos `merge` y finalmente pulsamos el botón `Merga selected & re-cluster`.
+
+[↑ Subir](#contenido)
+
+### 5.6. Extraer un _string_ de una columna
+
+Imagina que tenemos una cadena con una estructura similar en una columa. Por ejemplo, la forma de tratamiento más el nombre de una persona:
+
+- Sr. Pedro Jiménez
+- Sra. Natalia Sánchez
+- D. Aurlio Martínez
+
+Y queremos extraer el tratamiento que en este caso, estaría en primer lugar. Podríamos hacerlo mediante una expresión regular como hemos hecho anteriormente. Sin embargo, en esta ocasión lo haremos de otra forma.
+
+Vamos a obtener una nueva columna a partir de la columna `earnings`, que contendrá solo el valor numérico.  
+
+> _earnings -> Edit columns -> Split into several columns..._
+
+<figure>
+  <img src="./img/split-several-columns.png" alt="split-several-columns" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: split-several-columns.</figcaption>
+</figure>
+
+Señalamos la opción `by separator`, en el cuadro de texto debemos dejar un espacio y desmarcamos la opción `remove this column`. Damos a `OK`.
+
+<figure>
+  <img src="./img/split-column-earnings.png" alt="split-column-earnings" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: split-column-earnings.</figcaption>
+</figure>
+
+A continuación vemos como se ha creado una columna por cada una de las cadenas de la columna original. Simeplemente tenemos que mantener la que nos interesa, que en este caso es la que contiene el valor numérico, cambiar el nombre y borrar el resto.
+
+<figure>
+  <img src="./img/earnings-column-splitted.png" alt="earnings-column-splitted" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: earnings-column-splitted.</figcaption>
+</figure>
 
 https://www.kaggle.com/datasets/statchaitya/country-to-continent
 [Countries by Continent Dataset](https://www.kaggle.com/datasets/hserdaraltan/countries-by-continent?resource=download)
