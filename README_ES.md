@@ -343,9 +343,48 @@ En casos donde desconcemos le dato como en la columna `capital`, hemos rellenado
 
 ### 5.4. Gestión de duplicados
 
+Para este punto tomaremos como ejemplo la columna `num` ya que esos números, que representan un país, deben ser únicos. Seleccionamos la columna y:
 
+> _Facet -> Customized facets -> Duplicated facet_
 
-cell.cross("countries_continents_dataset", "Country").cells["Continent"].value[0]
+<figure>
+  <img src="./img/duplicated-facets.png" alt="duplicated-facets" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: duplicated-facets.</figcaption>
+</figure>
+
+En el panel de la izquierda aparecerán los datos de `num` marcados como TRUE sí el valor de `num` se repite. En este caso son 44 valores repetidos. Si pulsamos en true, nos aparecerá a la derecha solo esos valores. Despúes hacemos clic en `sort...` y después `ok` para que se ordenen por número y poder ver los duplicados en orden.
+
+<figure>
+  <img src="./img/num-sort-duplicates.png" alt="num-sort-duplicates" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: num-sort-duplicates.</figcaption>
+</figure>
+
+Para eliminar los duplicados, marcaremos con la bandera aquallas filas que querramos eliminar. 
+
+<figure>
+  <img src="./img/num-flags.png" alt="num-flags" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: num-flags.</figcaption>
+</figure>
+
+Luego desde la columna `All` seleccionaremos solo aquellas que tienen bandera:
+
+> _All -> Transform... -> Facet by flag_
+
+<figure>
+  <img src="./img/facet-by-flag.png" alt="facet-by-flag" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: facet-by-flag.</figcaption>
+</figure>
+
+Ahora el rpograma mostrará las filas que marcadmos anyteriormente con la bandera. Desde esa misma columna eliminaremos esa filas marcadas por la bandera, que son las duplicadas.
+
+> _All -> Edit rows -> Remove matching rows_
+
+<figure>
+  <img src="./img/REMOVE-MATCHING-ROWS.png" alt="REMOVE-MATCHING-ROWS" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: REMOVE-MATCHING-ROWS.</figcaption>
+</figure>
+
+De esta forma podemos eliminar duplicados innecesarios.
 
 https://www.kaggle.com/datasets/statchaitya/country-to-continent
 [Countries by Continent Dataset](https://www.kaggle.com/datasets/hserdaraltan/countries-by-continent?resource=download)
