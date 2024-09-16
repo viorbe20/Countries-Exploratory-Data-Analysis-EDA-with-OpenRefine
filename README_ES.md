@@ -394,6 +394,37 @@ Ahora el rpograma mostrará las filas que marcadmos anyteriormente con la bander
 
 De esta forma podemos eliminar duplicados innecesarios.
 
+[↑ Subir](#contenido)
+
+### 5.5. Agrupación (Cluster) 
+
+En ocasiones podemos encontrar el mismo dato repetido varias veces pero con diferentes formatos. Imagina por ejemplo los datos personales. Imagina por ejmplo un mismo nombre compuesto en diferente formatos: 
+
+- María de los Ángeles
+- María de los Angeles
+- MARÍA DE LOS ÁNGELES
+- María De Los Ángeles
+- María delos Ángeles
+
+En este caso, la función `cluster` va a permitir que el porgrama detect estos casos similares, y que nosotros podamos elegir la mejor opción para que todos los registros queden igual.
+
+En este caso lo haremos con la columna `address`. Haremos clic en el botón que aparece en el panel `facet` de la izquierda.
+
+
+<figure>
+  <img src="./img/facet-cluster.png" alt="facet-cluster" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: facet-cluster.</figcaption>
+</figure>
+
+Ahora hacemos clic en el botón que dice `cluster`justo en medio de la pantalla.
+
+<figure>
+  <img src="./img/click-cluster.png" alt="click-cluster" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: click-cluster.</figcaption>
+</figure>
+
+Esto nos mostrará los casos de agrupación que detecta el programa. A la derecha, en la caja de texto, introducimo el valor que queramos, marcamos `merge` y finalmente pulsamos el botón `Merga selected & re-cluster`.
+
 https://www.kaggle.com/datasets/statchaitya/country-to-continent
 [Countries by Continent Dataset](https://www.kaggle.com/datasets/hserdaraltan/countries-by-continent?resource=download)
 https://louisiana.libguides.com/guide_to_openrefine
