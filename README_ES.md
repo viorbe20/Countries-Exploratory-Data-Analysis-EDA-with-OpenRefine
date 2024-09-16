@@ -55,11 +55,13 @@ _dominio_: dominio de internet asociado con el país o región.
 
 [4. Conceptos importantes](#4-conceptos-importantes)
 
-[4.1. Rows vs. records](#41-rows-vs-records)
+[4.1. GREL (Google Refine Expression Language)](#41-rows-vs-records)
 
-[4.2. Tipo de datos](#42-tipo-de-datos)
+[4.2. Rows vs. records](#41-rows-vs-records)
 
-[4.3. Facets](#43-facets)
+[4.3. Tipo de datos](#42-tipo-de-datos)
+
+[4.4. Facets](#43-facets)
 
 [5. Análisis Exploratorio de Datos (ADE)](#5-análisis-exploratorio-de-datos-ade)
 
@@ -68,6 +70,8 @@ _dominio_: dominio de internet asociado con el país o región.
 [5.2. Gestión de celdas vacías y nulos](#52-gestión-de-celdas-vacías-y-nulos)
 
 [5.3. Gestión por columnas](#53-gestión-por-columnas)
+
+[5.4. Gestión de duplicados](#54-gestión-de-duplicados)
 
 ### 1. Open Refine
 
@@ -83,7 +87,11 @@ _dominio_: dominio de internet asociado con el país o región.
 
 ### 4. Conceptos importantes
 
-#### 4.1. Rows vs. records
+#### 4.1. GREL (Google Refine Expression Language)
+
+[↑ Subir](#contenido)
+
+#### 4.2. Rows vs. records
 
 Rows vs. records
 A row is a simple way to organize data: a series of cells, one cell per column. Sometimes there are multiple pieces of information in one cell, such as when a survey respondent can select more than one response.
@@ -112,7 +120,7 @@ This feature is related to Column Groups, which however is incomplete and deprec
 
 [↑ Subir](#contenido)
 
-### 4.2. Tipo de datos
+### 4.3. Tipo de datos
 
 Según la documentación oficial los [tipos de datos](https://openrefine.org/docs/manual/exploring) que existen son:
 
@@ -143,7 +151,7 @@ Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`
 
 [↑ Subir](#contenido)
 
-### 4.3. Facets
+### 4.4. Facets
 
 [↑ Subir](#contenido)
 
