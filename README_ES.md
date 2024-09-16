@@ -24,77 +24,97 @@ Adquirir competencias en el manejo de datos, incluyendo su normalización, manip
 
 Los datos que se van a analizar representan información relacionada con países o regiones del mundo. Cada fila parece representar un país o territorio, y las columnas contienen varios datos sobre cada uno. A continuación se explican las columnas que contiene el conjunto de datos.
 
-- _code_: código alfabético del país o región.
-- _num_: código numérico del país o región.
-- _country_: el nombre del país o territorio.
-_continent_: continente al que pertenece.
-_region_: región a nivel mundial a la que pertenece.
-_surface_area_: área de la superficie del país.
-_ independence_year: año de independencia del país (si es aplicable).
-_population_: población total del país.
-_life_expectancy_: esperanza de vida promedio.
-_pop_life_:  variante de población relacionada con la esperanza de vida.
-_gnp_: Producto Nacional Bruto (PNB).
-_gnp_old_:  versión anterior del PNB.
-_local_name_: nombre local del país en su idioma.
-_government_form_: forma de gobierno del país (por ejemplo, monarquía constitucional).
-_street_: direcciones específicas.
-_head_of_state_: nombre del jefe de estado del país.
-_capital_: código numérico de la capital del país.
-_code2_: otro código numérico del país.
-_ganancias_:  ingresos o ganancias del país en alguna unidad monetaria.
-_dominio_: dominio de internet asociado con el país o región.
+- `code`: código alfabético del país o región.
+- `num`: código numérico del país o región.
+- `country`: el nombre del país o territorio.
+- `continent`: continente al que pertenece.
+- `region`: región a nivel mundial a la que pertenece.
+- `surface_area`: área de la superficie del país.
+- `independence_year`: año de independencia del país (si es aplicable).
+- `population`: población total del país.
+- `life_expectancy`: esperanza de vida promedio.
+- `pop_life`:  variante de población relacionada con la esperanza de vida.
+- `gnp`: Producto Nacional Bruto (PNB).
+- `gnp_old`:  versión anterior del PNB.
+- `local_name`: nombre local del país en su idioma.
+- `government_form`: forma de gobierno del país (por ejemplo, monarquía constitucional).
+- `street`: direcciones específicas.
+- `head_of_state`: nombre del jefe de estado del país.
+- `capital`: código numérico de la capital del país.
+- `code2`: otro código numérico del país.
+- `ganancias`:  ingresos o ganancias del país en alguna unidad monetaria.
+- `dominio`: dominio de internet asociado con el país o región.
 
 ## Contenido
 
 [1. Open Refine](#1-open-refine)
 
-[2. Carga de datos](#2-carga-datos)
+[2. Creación del proyecto](#2-creación-del-proyecto)
 
-[3. Creación del proyecto](#3-creación-del-proyecto)
+[3. Conceptos importantes](#3-conceptos-importantes)
 
-[4. Conceptos importantes](#4-conceptos-importantes)
+[3.1. GREL (Google Refine Expression Language)](#31-grel-google-refine-expression-language)
 
-[4.1. GREL (Google Refine Expression Language)](#41-rows-vs-records)
+[3.2. Rows vs. records](#32-rows-vs-records)
 
-[4.2. Rows vs. records](#41-rows-vs-records)
+[3.3. Tipo de datos](#33-tipo-de-datos)
 
-[4.3. Tipo de datos](#42-tipo-de-datos)
+[3.4. Facets](#34-facets)
 
-[4.4. Facets](#43-facets)
+[4. Análisis Exploratorio de Datos (ADE)](#4-análisis-exploratorio-de-datos-ade)
 
-[5. Análisis Exploratorio de Datos (ADE)](#5-análisis-exploratorio-de-datos-ade)
+[4.1. Nombre de las columnas](#41-nombre-de-las-columnas)
 
-[5.1. Nombre de las columnas](#51-nombre-de-las-columnas)
+[4.2. Gestión de celdas vacías y nulos](#42-gestión-de-celdas-vacías-y-nulos)
 
-[5.2. Gestión de celdas vacías y nulos](#52-gestión-de-celdas-vacías-y-nulos)
+[4.3. Gestión por columnas](#43-gestión-por-columnas)
 
-[5.3. Gestión por columnas](#53-gestión-por-columnas)
+[4.4. Gestión de duplicados](#44-gestión-de-duplicados)
 
-[5.4. Gestión de duplicados](#54-gestión-de-duplicados)
+[5. Webgrafía](#5-webgrafía)
 
-[6. Webgrafía](#6-webgrafía)
+[6. Autora](#6-autora)
 
 
 ### 1. Open Refine
 
+OpenRefine es una herramienta gratuita y de código abierto utilizada para gestionar datos desorganizados. Permite limpiarlos, convertirlos entre diferentes formatos y enriquecerlos con servicios web y datos externos. Puedes [descargar OpenRefine](https://openrefine.org/download) desde la página oficial. Una vez descargado solo necesitas descomprimir y abrir desde el icono que encontrarás en la carpeta con la extensión .exe.
+
+<figure>
+  <img src="./img/open-refine-icon.png" alt="open-refine-icon" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: Icono openrefine.exe.</figcaption>
+</figure>
+
+Al hacer clic se abriá el porgrama en el navegador de tu equipo
 [↑ Subir](#contenido)
 
-### 2. Carga de datos
+### 2. Creación del proyecto
+
+En la pantalla principal de OpenRefine, haz clic en `Create Project`  y selecciona el archivo con la fuente de datos. Después de seleccionar el archivo, OpenRefine te mostrará una vista previa de los datos. Aquí puedes ajustar la configuración de importación, como el delimitador para archivos CSV, el formato de las fechas, la codificación de caracteres, etc. Revisa los datos y realiza ajustes si es necesario. Asegúrate de que OpenRefine haya detectado correctamente el formato y el contenido del archivo. Por último haz clic en `Create Project` en la parte inferior y OpenRefine cargará los datos y creará un nuevo proyecto con ellos.
+
+
+<figure>
+  <img src="./img/create-project.png" alt="create-project" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: Create Project.</figcaption>
+</figure>
+
+Una vez cargados podrás cargarlos siempre desde 
+
+
+<figure>
+  <img src="./img/open-project.png" alt="open-project" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: Open Projects.</figcaption>
+</figure>
 
 [↑ Subir](#contenido)
 
-### 3. Creación del proyecto
+### 3. Conceptos importantes
+
+#### 3.1. GREL (Google Refine Expression Language)
 
 [↑ Subir](#contenido)
 
-### 4. Conceptos importantes
-
-#### 4.1. GREL (Google Refine Expression Language)
-
-[↑ Subir](#contenido)
-
-#### 4.2. Rows vs. records
+#### 3.2. Rows vs. records
 
 Rows vs. records
 A row is a simple way to organize data: a series of cells, one cell per column. Sometimes there are multiple pieces of information in one cell, such as when a survey respondent can select more than one response.
@@ -123,7 +143,7 @@ This feature is related to Column Groups, which however is incomplete and deprec
 
 [↑ Subir](#contenido)
 
-### 4.3. Tipo de datos
+### 3.3. Tipo de datos
 
 Según la documentación oficial los [tipos de datos](https://openrefine.org/docs/manual/exploring) que existen son:
 
@@ -154,14 +174,14 @@ Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`
 
 [↑ Subir](#contenido)
 
-### 4.4. Facets
+### 3.4. Facets
 
 [↑ Subir](#contenido)
 
 
-### 5. Análisis Exploratorio de Datos (ADE)
+### 4. Análisis Exploratorio de Datos (ADE)
 
-### 5.1. Nombre de las columnas
+### 4.1. Nombre de las columnas
 
 En primer se normalizarán los nombres de las columnas. Para ello se debe seleccionar la columna donde se desea eralizar el cambio, después `Edit Column` -> `Rename this column`. 
 
@@ -204,7 +224,7 @@ Los cambios que se han realizado son:
 
 [↑ Subir](#contenido)
 
-### 5.2. Gestión de celdas vacías y nulos
+### 4.2. Gestión de celdas vacías y nulos
 
 Para este ejemplo escogeremos la columna `popu_life_expectancy`. Sigue los siguientes pasos:
 
@@ -289,7 +309,7 @@ Añadiremos la siguiente expresión la cual busca el valor de la columna _Countr
 
 [↑ Subir](#contenido)
 
-### 5.3. Gestión por columnas
+### 4.3. Gestión por columnas
 
 **Columna _code_**
 
@@ -352,7 +372,7 @@ En casos donde desconcemos le dato como en la columna `capital`, hemos rellenado
 
 [↑ Subir](#contenido)
 
-### 5.4. Gestión de duplicados
+### 4.4. Gestión de duplicados
 
 Para este punto tomaremos como ejemplo la columna `num` ya que esos números, que representan un país, deben ser únicos. Seleccionamos la columna y:
 
@@ -399,7 +419,7 @@ De esta forma podemos eliminar duplicados innecesarios.
 
 [↑ Subir](#contenido)
 
-### 5.5. Agrupación (Cluster) 
+### 4.5. Agrupación (Cluster) 
 
 En ocasiones podemos encontrar el mismo dato repetido varias veces pero con diferentes formatos. Imagina por ejemplo los datos personales. Imagina por ejmplo un mismo nombre compuesto en diferente formatos: 
 
@@ -430,7 +450,7 @@ Esto nos mostrará los casos de agrupación que detecta el programa. A la derech
 
 [↑ Subir](#contenido)
 
-### 5.6. Extraer un _string_ de una columna
+### 4.6. Extraer un _string_ de una columna
 
 Imagina que tenemos una cadena con una estructura similar en una columa. Por ejemplo, la forma de tratamiento más el nombre de una persona:
 
@@ -463,7 +483,10 @@ A continuación vemos como se ha creado una columna por cada una de las cadenas 
   <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: earnings-column-splitted.</figcaption>
 </figure>
 
-### 6. Webgrafía
+
+[↑ Subir](#contenido)
+
+### 5. Webgrafía
 
 - [Countries by Continent Dataset](https://www.kaggle.com/datasets/hserdaraltan/countries-by-continent?resource=download)
 
@@ -471,10 +494,17 @@ A continuación vemos como se ha creado una columna por cada una de las cadenas 
 
 - [Guía para la limpieza de datos sobre biodiversidad con OpenRefine - Global Biodiversity Information Facility](https://docs.gbif.org/openrefine-guide/3.0/es/)
 
-- [OpenRefine Tutorials: How To Join Two Data Set - RefinePro](https://www.youtube.com/watch?v=ogE2xZk7354)
-
 - [Imagen Portada](https://pixabay.com/es/illustrations/ai-generado-mundo-mapa-datos-8966867/)
 
-### 7. Autora
+- [Limpieza de datos con OpenRefine: Guía práctica - Universidad Tecnológica de Panamá](https://ridda2.utp.ac.pa/handle/123456789/18247)
 
-- Virginia Ordoño Bernier - [@viorbe20](https://github.com/viorbe20)
+- [OpenRefine Documentation](https://openrefine.org/docs)
+
+- [OpenRefine Tutorials: How To Join Two Data Set - RefinePro](https://www.youtube.com/watch?v=ogE2xZk7354)
+
+
+[↑ Subir](#contenido)
+
+### 6. Autora
+
+- [Virginia Ordoño Bernier](https://github.com/viorbe20)
