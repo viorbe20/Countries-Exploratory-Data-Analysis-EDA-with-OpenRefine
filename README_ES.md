@@ -226,7 +226,7 @@ A continuación expondremos los cambios que se realizarán en este caso, columna
 
 Existe otra columna que contiene el nombre del país o región y no tiene datos vacíos, por lo que con su ayuda podremos completar el continente correspondiente. Veamos cuántos países diferentes existen. Selecciona:
 
-> _Facet -> Text facet
+> _Facet -> Text facet_
 
 En el panel de facets que aparece, verás todos los nombres de países únicos, junto con un conteo de cuántas veces aparece cada uno. Hay muchos países como para hacerlo a mano uno por uno.
 
@@ -262,7 +262,59 @@ Escribimos la siguiente expresión: `value.toTitlecase()`
 Añadiremos la siguiente expresión la cual busca el valor de la columna _Country_ en el dataset de referencia "countries_continents_dataset", obtiene el valor correspondiente de la columna Continent, y devuelve ese valor para completar la celda actual. El [0] accede al primer valor en caso de que la búsqueda devuelva una lista.  De esta forma se crea una nueva columna _continent_ con los nombres correspondientes. Algunos valores seguirán en blanco, ya que puede que no existan esas coincidencias. Habrá que escribirlas a mano.
 
 > `cell.cross("countries_continents_dataset", "Country").cells["Continent"].value[0]`
-### 5.4. Gestión de duplicados
+
+### 5.4. Gestión por columnas
+
+**Columna _code_**
+
+Esta columna parece mostrar una codificación del país representada por tres caracteres. No hay nulos o vacíos pero sí que se ha detectado que no todos los valores siguen el formato _uppercase_ por que lo que vamos a transformarlos. Seleccionamos la columna y :
+
+> _Edit cells -> Common transforms -> To uppercase_ 
+
+Así conseguiremos unificar los datos de la columna.
+
+**Columna _region_**
+
+En esta columna se ha detectado que no todos los valores siguen el formato _titlecase_ por que lo que vamos a transformarlos. Seleccionamos la columna y :
+
+> _Edit cells -> Common transforms -> To titlecase_ 
+
+Así conseguiremos unificar los datos de la columna.
+
+**Columna _independence year_**
+
+En esta caso se detecta mucha disparidad de datos. Aunque aparentemente son años son tipo _string_. Además, la mayoría son 4 dígitos que parecen representar años, pero también encontramos cifras dígitos en negativo, _nulls_, y 0. Para solucionar esto, vamos a transformar a 0 todos los valores que no tengan una estructura de año y posteriormente convertiremos la columna entera a tipo _number_. Para ellos usaremos `expresiones regulares`. Seleccionamos la columna correspondiente y aplicamos:
+
+> _Edit cells -> Transform..._
+
+En `Expression` incluimos las siguiente expresiones:
+
+1. `value.replace(/^-.*$/, "0")`- Convierte los valores negativos en 0.
+2. `value.replace("NuLL", "0")`- Convierte _nulls_ en 0.
+
+Para convertir la columna a _number_
+
+> _Edit cells -> Common transforms -> To number_
+
+<figure>
+  <img src="./img/year-text-to-number.png" alt="year-text-to-number" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: year-text-to-number.</figcaption>
+</figure>
+
+Algo similar haremos con _popu life expectancy_ convirtiendo los nulos a 0 y transformando a _number_. En este caso lo haremos de otra forma. Colocamos el ratón justo encima de una de las celdas con valor "NuLL" y pulsamo en `edit`.
+
+<figure>
+  <img src="./img/edit-a-cell.png" alt="edit-a-cell" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: edit-a-cell.</figcaption>
+</figure>
+
+Escribimos en este caso 0, que es el valor por el que lo queremos sustituir, y posteriormente hacemos clic en `Apply to all identical cells` para que el cambio se aplique a todas las celdas que tienen el mismo valor.
+
+Para convertir la columna a _number_
+
+> _Edit cells -> Common transforms -> To number_
+
+Columnas con cambios similares: `popu_life_expectancy`
 
 ### 5.5. Gestión de tipo de datos
 
