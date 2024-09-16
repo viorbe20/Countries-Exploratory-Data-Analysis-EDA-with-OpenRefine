@@ -73,6 +73,7 @@ _dominio_: dominio de internet asociado con el país o región.
 
 [5.4. Gestión de duplicados](#54-gestión-de-duplicados)
 
+[6. Webgrafía](#6-webgrafía)
 
 
 ### 1. Open Refine
@@ -462,10 +463,18 @@ A continuación vemos como se ha creado una columna por cada una de las cadenas 
   <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: earnings-column-splitted.</figcaption>
 </figure>
 
-https://www.kaggle.com/datasets/statchaitya/country-to-continent
-[Countries by Continent Dataset](https://www.kaggle.com/datasets/hserdaraltan/countries-by-continent?resource=download)
-https://louisiana.libguides.com/guide_to_openrefine
-https://docs.gbif.org/openrefine-guide/3.0/es/
-[OpenRefine Tutorials: How To Join Two Data Set](https://www.youtube.com/watch?v=ogE2xZk7354)
+### 6. Webgrafía
 
-[Imagen Portada](https://pixabay.com/es/illustrations/ai-generado-mundo-mapa-datos-8966867/)
+- [Countries by Continent Dataset](https://www.kaggle.com/datasets/hserdaraltan/countries-by-continent?resource=download)
+
+- [Guide to OpenRefine - University of Louisiana at Lafayette](https://louisiana.libguides.com/guide_to_openrefine)
+
+- [Guía para la limpieza de datos sobre biodiversidad con OpenRefine - Global Biodiversity Information Facility](https://docs.gbif.org/openrefine-guide/3.0/es/)
+
+- [OpenRefine Tutorials: How To Join Two Data Set - RefinePro](https://www.youtube.com/watch?v=ogE2xZk7354)
+
+- [Imagen Portada](https://pixabay.com/es/illustrations/ai-generado-mundo-mapa-datos-8966867/)
+
+### 7. Autora
+
+- Virginia Ordoño Bernier - [@viorbe20](https://github.com/viorbe20)
