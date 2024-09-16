@@ -59,7 +59,15 @@ _dominio_: dominio de internet asociado con el país o región.
 
 [4.2. Tipo de datos](#42-tipo-de-datos)
 
+[4.3. Facets](#43-facets)
+
 [5. Análisis Exploratorio de Datos (ADE)](#5-análisis-exploratorio-de-datos-ade)
+
+[5.1. Nombre de las columnas](#51-nombre-de-las-columnas)
+
+[5.2. Gestión de celdas vacías y nulos](#52-gestión-de-celdas-vacías-y-nulos)
+
+[5.3. Gestión por columnas](#53-gestión-por-columnas)
 
 ### 1. Open Refine
 
@@ -135,6 +143,11 @@ Para comprobar el tipo de dato en caso de una celda, se puede usar `type(value)`
 
 [↑ Subir](#contenido)
 
+### 4.3. Facets
+
+[↑ Subir](#contenido)
+
+
 ### 5. Análisis Exploratorio de Datos (ADE)
 
 ### 5.1. Nombre de las columnas
@@ -180,7 +193,7 @@ Los cambios que se han realizado son:
 
 [↑ Subir](#contenido)
 
-### 5.3. Gestión de celdas vacías y nulos
+### 5.2. Gestión de celdas vacías y nulos
 
 Para este ejemplo escogeremos la columna `popu_life_expectancy`. Sigue los siguientes pasos:
 
@@ -263,7 +276,9 @@ Añadiremos la siguiente expresión la cual busca el valor de la columna _Countr
 
 > `cell.cross("countries_continents_dataset", "Country").cells["Continent"].value[0]`
 
-### 5.4. Gestión por columnas
+[↑ Subir](#contenido)
+
+### 5.3. Gestión por columnas
 
 **Columna _code_**
 
@@ -273,6 +288,8 @@ Esta columna parece mostrar una codificación del país representada por tres ca
 
 Así conseguiremos unificar los datos de la columna.
 
+Columnas similares: `capital`.
+
 **Columna _region_**
 
 En esta columna se ha detectado que no todos los valores siguen el formato _titlecase_ por que lo que vamos a transformarlos. Seleccionamos la columna y :
@@ -280,6 +297,8 @@ En esta columna se ha detectado que no todos los valores siguen el formato _titl
 > _Edit cells -> Common transforms -> To titlecase_ 
 
 Así conseguiremos unificar los datos de la columna.
+
+Columnas similares: `local_name`, `address`, `head_of_state`
 
 **Columna _independence year_**
 
@@ -314,9 +333,15 @@ Para convertir la columna a _number_
 
 > _Edit cells -> Common transforms -> To number_
 
-Columnas con cambios similares: `popu_life_expectancy`
+Columnas con cambios similares: `popu_life_expectancy`, `gnp_old`.
 
-### 5.5. Gestión de tipo de datos
+**Otras trasnformaciones**
+
+En casos donde desconcemos le dato como en la columna `capital`, hemos rellenado manualmente con N/A.
+
+[↑ Subir](#contenido)
+
+### 5.4. Gestión de duplicados
 
 
 
