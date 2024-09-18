@@ -89,7 +89,7 @@ OpenRefine es una herramienta gratuita y de código abierto utilizada para gesti
 <br>
 
 
-Al hacer clic se abriá el porgrama en el navegador de tu equipo
+Al hacer clic se abriá el porgrama en el navegador de tu equipo.
 
 [↑ Subir](#contenido)
 
@@ -103,7 +103,15 @@ En la pantalla principal de OpenRefine, haz clic en `Create Project`  y seleccio
   <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: Create Project.</figcaption>
 </figure>
 
-Una vez cargados podrás cargarlos siempre desde 
+<br>
+<p align="center">
+  <img src="./img/create-project.png" alt="create-project" style="width: 100%; height: auto;"/>
+</p>
+
+<p align="center">
+  <em>Figura 2: Crear un proyecto.</em>
+</p>
+<br>
 
 
 <figure>
