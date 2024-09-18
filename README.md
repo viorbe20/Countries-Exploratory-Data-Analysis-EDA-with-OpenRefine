@@ -5,12 +5,12 @@
 </a>
 
 
-## Acerca de la guía
+## Acerca del proyecto
 Este proyecto es una práctica basada en el uso de OpenRefine para la limpieza de datos. La actividad se realizó con el objetivo de aprender y aplicar conceptos de alfabetización de datos y manejo de herramientas para la preparación y limpieza de datasets.
 
-Fuente: Curso "Alfabetización de datos - Tema 4: Limpieza de datos con OpenRefine".
-Autor: Danny Murillo González. 
-Entidad: Centro de Investigación, Desarrollo e Innovación en Tecnologías de la Información y las Comunicaciones (CIDITIC).
+- Fuente: _Curso "Alfabetización de datos - Tema 4: Limpieza de datos con OpenRefine"._
+- Autor: Danny Murillo González. 
+- Entidad: Centro de Investigación, Desarrollo e Innovación en Tecnologías de la Información y las Comunicaciones (CIDITIC).
 
 Puedes acceder al material original a través del repositorio oficial en el siguiente enlace: [Repositorio RIDDA2 UTP](https://ridda2.utp.ac.pa/bitstream/handle/123456789/18247/practica-open-refine-v2-2024-02-06.pdf?sequence=14&isAllowed=y)
 
@@ -20,7 +20,7 @@ Adquirir competencias en el manejo de datos, incluyendo su normalización, manip
 
 ## Descripción
 
-Los datos que se van a analizar representan información relacionada con países o regiones del mundo. Cada fila parece representar un país o territorio, y las columnas contienen varios datos sobre cada uno. A continuación se explican las columnas que contiene el conjunto de datos.
+Los datos que se van a analizar representan información relacionada con países o regiones del mundo. Cada fila representa un país o territorio, y las columnas contienen varios datos sobre cada uno. A continuación se explica la información que contien dichas columnas.
 
 - `code`: código alfabético del país o región.
 - `num`: código numérico del país o región.
@@ -79,11 +79,12 @@ Los datos que se van a analizar representan información relacionada con países
 OpenRefine es una herramienta gratuita y de código abierto utilizada para gestionar datos desorganizados. Permite limpiarlos, convertirlos entre diferentes formatos y enriquecerlos con servicios web y datos externos. Puedes [descargar OpenRefine](https://openrefine.org/download) desde la página oficial. Una vez descargado solo necesitas descomprimir y abrir desde el icono que encontrarás en la carpeta con la extensión .exe.
 
 <figure>
-  <img src="./img/open-refine-icon.png" alt="open-refine-icon" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
-  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: Icono openrefine.exe.</figcaption>
+  <img src="./img/open-refine-icon.png" alt="open-refine-icon" style="width: 35%; height:auto; align=center"/>
+  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura 1: Icono para ejecutar OpenRefine.</figcaption>
 </figure>
 
 Al hacer clic se abriá el porgrama en el navegador de tu equipo
+
 [↑ Subir](#contenido)
 
 ### 2. Creación del proyecto
