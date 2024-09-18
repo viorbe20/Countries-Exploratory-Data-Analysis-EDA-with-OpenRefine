@@ -97,12 +97,6 @@ Al hacer clic se abriá el porgrama en el navegador de tu equipo.
 
 En la pantalla principal de OpenRefine, haz clic en `Create Project`  y selecciona el archivo con la fuente de datos. Después de seleccionar el archivo, OpenRefine te mostrará una vista previa de los datos. Aquí puedes ajustar la configuración de importación, como el delimitador para archivos CSV, el formato de las fechas, la codificación de caracteres, etc. Revisa los datos y realiza ajustes si es necesario. Asegúrate de que OpenRefine haya detectado correctamente el formato y el contenido del archivo. Por último haz clic en `Create Project` en la parte inferior y OpenRefine cargará los datos y creará un nuevo proyecto con ellos.
 
-
-<figure>
-  <img src="./img/create-project.png" alt="create-project" style="width: 100%; height: auto;" />
-  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: Create Project.</figcaption>
-</figure>
-
 <br>
 <p align="center">
   <img src="./img/create-project.png" alt="create-project" style="width: 100%; height: auto;"/>
@@ -113,11 +107,17 @@ En la pantalla principal de OpenRefine, haz clic en `Create Project`  y seleccio
 </p>
 <br>
 
+Una vez creado el proyecto se guardará. Siempre que necesites volver, podrás usar la optión `Open Project`.
 
-<figure>
-  <img src="./img/open-project.png" alt="open-project" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
-  <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: Open Projects.</figcaption>
-</figure>
+<br>
+<p align="center">
+  <img src="./img/open-project.png" alt="open-project" style="width: 100%; height: auto;"/>
+</p>
+
+<p align="center">
+  <em>Figura 3: Abrir un proyecto.</em>
+</p>
+<br>
 
 [↑ Subir](#contenido)
 
