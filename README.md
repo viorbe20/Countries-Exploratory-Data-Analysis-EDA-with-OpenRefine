@@ -83,6 +83,13 @@ OpenRefine es una herramienta gratuita y de código abierto utilizada para gesti
   <figcaption style="font-size: 0.1rem; margin-bottom:500px">Figura 1: Icono para ejecutar OpenRefine.</figcaption>
 </figure>
 
+<p align="center">
+  <img src="./img/open-refine-icon.png" alt="open-refine-icon" width="100"/>
+</p>
+<p align="center">
+  <em>Figura 1: Icono para ejecutar OpenRefine.</em>
+</p>
+
 Al hacer clic se abriá el porgrama en el navegador de tu equipo
 
 [↑ Subir](#contenido)
