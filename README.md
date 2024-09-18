@@ -92,7 +92,7 @@ En la pantalla principal de OpenRefine, haz clic en `Create Project`  y seleccio
 
 
 <figure>
-  <img src="./img/create-project.png" alt="create-project" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 10px; width: 35%; height: auto; display: block; margin: 20px auto; background-color: #fff; border-radius: 10px;" />
+  <img src="./img/create-project.png" alt="create-project" style="width: 100%; height: auto;" />
   <figcaption style="font-size: 0.8em; text-align: center; color: #555;">Figura: Create Project.</figcaption>
 </figure>
 
