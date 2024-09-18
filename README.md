@@ -78,15 +78,10 @@ Los datos que se van a analizar representan información relacionada con países
 
 OpenRefine es una herramienta gratuita y de código abierto utilizada para gestionar datos desorganizados. Permite limpiarlos, convertirlos entre diferentes formatos y enriquecerlos con servicios web y datos externos. Puedes [descargar OpenRefine](https://openrefine.org/download) desde la página oficial. Una vez descargado solo necesitas descomprimir y abrir desde el icono que encontrarás en la carpeta con la extensión .exe.
 
-<figure>
+<p align="center">
   <img src="./img/open-refine-icon.png" alt="open-refine-icon" style="width: 20%; height:auto;"/>
-  <figcaption style="font-size: 0.1rem; margin-bottom:500px">Figura 1: Icono para ejecutar OpenRefine.</figcaption>
-</figure>
-
-<p align="center">
-  <img src="./img/open-refine-icon.png" alt="open-refine-icon" width="100"/>
 </p>
-<p align="center">
+<p align="center" >
   <em>Figura 1: Icono para ejecutar OpenRefine.</em>
 </p>
 
