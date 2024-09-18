@@ -1,7 +1,5 @@
 # Análisis Exploratorio de Datos (ADE) con OpenRefine
 
-[Read in English](README.md)
-
 <a href="https://example.com/cover.jpg">
   <img src="./img/cover.jpg" alt="Cover" style="width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" />
 </a>
