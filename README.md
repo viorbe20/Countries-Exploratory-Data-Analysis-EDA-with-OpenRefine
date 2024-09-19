@@ -125,6 +125,21 @@ Una vez creado el proyecto se guardará. Siempre que necesites volver, podrás u
 
 #### 3.1. GREL (Google Refine Expression Language)
 
+GREL es un lenguaje diseñado de manera similar a Javascript. Las fórmulas usan variables y dependen de los tipos de datos para realizar tareas como la manipulación de cadenas o cálculos matemáticos. Su sintaxis sencilla y cercana a Javascript lo hace accesible para quienes ya están familiarizados con lenguajes de programación.
+
+GREL permite a los usuarios definir reglas personalizadas para transformar datos, permitiendo trabajar de manera flexible con grandes conjuntos de datos de diversos formatos.
+
+Algunas de sus características son:
+- Manipulación de cadenas de texto: GREL permite trabajar con cadenas de texto mediante funciones como concatenación, recorte o división.
+- Cálculos matemáticos: También permite realizar operaciones matemáticas como sumas, restas, multiplicaciones y divisiones entre valores numéricos.
+- Condicionales: Se pueden usar condicionales para crear reglas más complejas basadas en valores de datos.
+- Manipulación de fechas: GREL incluye funciones para trabajar con fechas, como convertir cadenas en fechas y formatear fechas.
+- Expresiones regulares: Al igual que en Javascript, se pueden usar expresiones regulares para encontrar y modificar patrones complejos en los datos.
+
+Algunas de estas funciones se usarán en este proyecto. 
+
+Puedes ampliar la información en el siguiente enlace: [OpenRefine - GREL](https://openrefine.org/docs/manual/grel)
+
 [↑ Subir](#contenido)
 
 #### 3.2. Rows vs. records
